@@ -45,14 +45,19 @@ main {
     margin: 15px;
 }
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 nav a {
     color: #222;
     text-decoration: none;
 }
 
 nav li {
-    display: inline;
-    float: right;
+    list-style: none;
     margin-left: 8px;
     margin-right: 8px;
 }
