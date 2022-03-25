@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: blanchedalmond;
+    background-color: aliceblue;
+    margin: 0px;
 }
 
 h1, h2 {
@@ -21,8 +22,17 @@ h2 {
 }
 
 header {
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #222;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
 }
 
 nav li {
@@ -36,6 +46,7 @@ nav li {
 {
     display: block;
     max-width: 500px;
+    margin: auto;
     border: 6px ridge chocolate;
     box-shadow: 10px 8px 3px gray;
 }
