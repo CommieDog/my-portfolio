@@ -8,6 +8,17 @@ body {
     margin: 0px;
 }
 
+footer {
+    margin: auto;
+}
+
+footer h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-align: center;
+}
+
 h1, h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
@@ -28,6 +39,10 @@ header {
     border-width: 0 0 2px 0;
     border-style: solid;
     border-color: #222;
+}
+
+main {
+    margin: 15px;
 }
 
 nav a {
