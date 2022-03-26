@@ -35,7 +35,6 @@ h2 {
 header {
     background-color: lightblue;
     display: flex;
-    flex-direction: column;
     border-width: 0 0 2px 0;
     border-style: solid;
     border-color: #222;
@@ -74,4 +73,15 @@ nav li {
     margin: auto;
     border: 6px ridge chocolate;
     box-shadow: 10px 8px 3px gray;
+}
+
+#address
+{
+    margin: auto 0;
+}
+
+#address p {
+    font-size: 2em;
+    margin: 0;
+    line-height: 1.5;
 }
