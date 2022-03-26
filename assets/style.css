@@ -86,8 +86,6 @@ nav ul {
 .work-item {
     width: 400px;
     margin: 0;
-    float: left;
-    display: inline;
 }
 
 .work-item h3 {
@@ -139,13 +137,14 @@ nav ul {
     line-height: 1.5;
 }
 
+#project-showcase {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #main-project
 {
     width: 800px;
-}
-
-#my-experience {
-    clear: left;
 }
 
 @media screen and (max-width: 992px)
