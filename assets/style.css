@@ -74,21 +74,15 @@ nav ul {
     flex-grow: 1;
 }
 
-.float-left {
-    float: left;
-}
-
 .work-item {
     width: 400px;
     height: 320px;
+    float: left;
+    display: inline;
 }
 
 .work-item img {
     height: 100%;
-}
-
-.inline {
-    display: inline;
 }
 
 #portrait
@@ -134,11 +128,6 @@ nav ul {
 {
     width: 800px;
     height: 640px;
-}
-
-#main-project img
-{
-    height: 100%;
 }
 
 #my-experience {
