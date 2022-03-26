@@ -4,9 +4,8 @@
 }
 
 body {
-    background-color: aliceblue;
+    background: linear-gradient(lightcyan, aliceblue);
     margin: 0px;
-    /*width: 100%*/
 }
 
 footer {
