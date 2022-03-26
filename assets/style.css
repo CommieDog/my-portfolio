@@ -74,6 +74,18 @@ nav ul {
     flex-grow: 1;
 }
 
+.float-left {
+    float: left;
+}
+
+.work-item img {
+    height: 250px;
+}
+
+.inline {
+    display: inline;
+}
+
 #portrait
 {
     display: block;
@@ -89,13 +101,6 @@ nav ul {
     margin: auto 0;
 }
 
-/*#header-right nav {
-    height: 100px;
-    width: 100px;
-    display: inline;
-    float: right;
-}*/
-
 #address {
     position: absolute;
     transform: translateY(-50%);
@@ -107,4 +112,13 @@ nav ul {
     font-size: 2em;
     margin: 0;
     line-height: 1.5;
+}
+
+#my-work {
+    display: inline-block;
+}
+
+#my-experience {
+    display: block;
+    width: 100%
 }
