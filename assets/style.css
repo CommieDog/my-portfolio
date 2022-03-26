@@ -41,6 +41,11 @@ header {
     border-color: #222;
 }
 
+header figure {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     margin: 15px;
 }
