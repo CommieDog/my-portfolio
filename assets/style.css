@@ -6,7 +6,7 @@
 body {
     background-color: aliceblue;
     margin: 0px;
-    width: 100%
+    /*width: 100%*/
 }
 
 footer {
@@ -78,8 +78,13 @@ nav ul {
     float: left;
 }
 
+.work-item {
+    width: 400px;
+    height: 320px;
+}
+
 .work-item img {
-    height: 250px;
+    height: 100%;
 }
 
 .inline {
@@ -115,10 +120,27 @@ nav ul {
 }
 
 #my-work {
-    display: inline-block;
+    /*display: inline-block;*/
+    width: 1200px;
+}
+
+#my-work figure {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#main-project
+{
+    width: 800px;
+    height: 640px;
+}
+
+#main-project img
+{
+    height: 100%;
 }
 
 #my-experience {
-    display: block;
-    width: 100%
+    clear: left;
 }
