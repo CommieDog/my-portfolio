@@ -144,7 +144,7 @@ nav ul {
 
 #main-project
 {
-    width: 800px;
+    width: 600px;
 }
 
 @media screen and (max-width: 992px)
@@ -172,7 +172,7 @@ nav ul {
 
     #main-project
     {
-        width: 750px;
+        width: 562.5px;
     }
 }
 
@@ -183,7 +183,7 @@ nav ul {
     }
 
     .work-item {
-        width: 480px;
+        width: 375px;
         margin: 0 auto; /* center element horziontally*/
         /* Don't bother with floating elements, screen size is too small to try */
         display: block;
@@ -192,6 +192,6 @@ nav ul {
 
     #main-project
     {
-        width: 600px;
+        width: 562.5px;
     }
 }
