@@ -132,3 +132,49 @@ nav ul {
 #my-experience {
     clear: left;
 }
+
+@media screen and (max-width: 992px)
+{
+    header {
+        background-color: red;
+    }
+
+    #my-work {
+        width: 768px;
+    }
+
+    .work-item {
+        width: 384px;
+        height: 307px;
+    }
+
+    #main-project
+    {
+        width: 768px;
+        height: 614px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    header {
+        background-color: green;
+    }
+
+    #my-work {
+        width: 640px;
+    }
+
+    .work-item {
+        /*width: 384px;
+        height: 307px;*/
+        width: 640px;
+        height: 512px;
+    }
+
+    #main-project
+    {
+        width: 640px;
+        height: 512px;
+    }
+}
