@@ -115,7 +115,7 @@ nav ul {
 
 #my-work {
     /*display: inline-block;*/
-    width: 1200px;
+    width: 100%;
 }
 
 #main-project
@@ -131,11 +131,11 @@ nav ul {
 
 @media screen and (max-width: 992px)
 {
-    #my-work {
+    /*#my-work {
         width: 750px;
-    }
+    }*/
 
-    .work-item {
+    /*.work-item {
         width: 375px;
         height: 300px;
     }
@@ -144,7 +144,7 @@ nav ul {
     {
         width: 750px;
         height: 600px;
-    }
+    }*/
 }
 
 @media screen and (max-width: 768px)
