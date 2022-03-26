@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(lightcyan, aliceblue);
+    background: linear-gradient(lightcyan, aliceblue); /* Subtle, but pleasant */
     margin: 0px;
 }
 
@@ -46,7 +46,6 @@ header {
 header figure {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 }
 
 main {
@@ -80,10 +79,6 @@ nav ul {
     margin-top: auto;
 }
 
-.grow-to-fit {
-    flex-grow: 1;
-}
-
 .work-item {
     width: 400px;
     height: 320px;
@@ -99,7 +94,7 @@ nav ul {
 #portrait
 {
     display: block;
-    max-width: 350px;
+    max-width: 250px;
     margin: auto;
     border: 6px ridge chocolate;
     box-shadow: 10px 8px 3px gray;
@@ -110,7 +105,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    /*margin: auto 0;*/
 }
 
 #header-right .vertical-spacer
@@ -129,16 +123,10 @@ nav ul {
     line-height: 1.5;
 }
 
-#my-work {
-    /*display: inline-block;*/
-    width: 100%;
-}
-
 #main-project
 {
     width: 800px;
     height: 640px;
-    margin: 0;
 }
 
 #my-experience {
@@ -149,13 +137,22 @@ nav ul {
 {
     header
     {
+        /* Screen is too small for horizontal flexbox, so do vertical instead */
         flex-direction: column;
     }
-    /*#my-work {
-        width: 750px;
-    }*/
 
-    /*.work-item {
+    #address p {
+        /* Since address is below portrait, the text looks better centered */
+        text-align: center;
+    }
+
+    /* Slightly smaller area for projects... */
+    #my-work {
+        width: 750px;
+    }
+
+    /* ...And proportionately smaller project tiles */
+    .work-item {
         width: 375px;
         height: 300px;
     }
@@ -164,7 +161,7 @@ nav ul {
     {
         width: 750px;
         height: 600px;
-    }*/
+    }
 }
 
 @media screen and (max-width: 768px)
@@ -177,7 +174,7 @@ nav ul {
         width: 480px;
         height: 384px;
         margin: 0 auto; /* center element horziontally*/
-        /* Don't bother with float, screen size is too small to try */
+        /* Don't bother with floating elements, screen size is too small to try */
         display: block;
         float: none;
     }
