@@ -32,6 +32,10 @@ h2 {
     font-size: 2.75em;
 }
 
+h3 {
+    font-size: 1.25em;
+}
+
 header {
     background-color: lightblue;
     display: flex;
@@ -81,14 +85,18 @@ nav ul {
 
 .work-item {
     width: 400px;
-    height: 320px;
     margin: 0;
     float: left;
     display: inline;
 }
 
+.work-item h3
+{
+    text-align: center;
+}
+
 .work-item img {
-    height: 100%;
+    width: 100%;
 }
 
 #portrait
@@ -126,7 +134,6 @@ nav ul {
 #main-project
 {
     width: 800px;
-    height: 640px;
 }
 
 #my-experience {
@@ -154,13 +161,11 @@ nav ul {
     /* ...And proportionately smaller project tiles */
     .work-item {
         width: 375px;
-        height: 300px;
     }
 
     #main-project
     {
         width: 750px;
-        height: 600px;
     }
 }
 
@@ -172,7 +177,6 @@ nav ul {
 
     .work-item {
         width: 480px;
-        height: 384px;
         margin: 0 auto; /* center element horziontally*/
         /* Don't bother with floating elements, screen size is too small to try */
         display: block;
@@ -182,6 +186,5 @@ nav ul {
     #main-project
     {
         width: 600px;
-        height: 480px;
     }
 }
