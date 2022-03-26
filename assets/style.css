@@ -76,6 +76,7 @@ nav ul {
 .work-item {
     width: 400px;
     height: 320px;
+    margin: 0;
     float: left;
     display: inline;
 }
@@ -117,16 +118,11 @@ nav ul {
     width: 1200px;
 }
 
-#my-work figure {
-    font-size: 0;
-    margin: 0;
-    padding: 0;
-}
-
 #main-project
 {
     width: 800px;
     height: 640px;
+    margin: 0;
 }
 
 #my-experience {
@@ -135,46 +131,40 @@ nav ul {
 
 @media screen and (max-width: 992px)
 {
-    header {
-        background-color: red;
-    }
-
     #my-work {
-        width: 768px;
+        width: 750px;
     }
 
     .work-item {
-        width: 384px;
-        height: 307px;
+        width: 375px;
+        height: 300px;
     }
 
     #main-project
     {
-        width: 768px;
-        height: 614px;
+        width: 750px;
+        height: 600px;
     }
 }
 
 @media screen and (max-width: 768px)
 {
-    header {
-        background-color: green;
-    }
-
     #my-work {
-        width: 640px;
+        width: 600px;
     }
 
     .work-item {
-        /*width: 384px;
-        height: 307px;*/
-        width: 640px;
-        height: 512px;
+        width: 480px;
+        height: 384px;
+        margin: 0 auto; /* center element horziontally*/
+        /* Don't bother with float, screen size is too small to try */
+        display: block;
+        float: none;
     }
 
     #main-project
     {
-        width: 640px;
-        height: 512px;
+        width: 600px;
+        height: 480px;
     }
 }
