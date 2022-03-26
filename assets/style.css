@@ -85,7 +85,6 @@ nav ul {
 
 .work-item {
     width: 400px;
-    margin: 0;
 }
 
 .work-item h3 {
@@ -93,7 +92,9 @@ nav ul {
 }
 
 .work-item img {
-    width: 100%;
+    /* Needs to be 100% after adjusting for border */
+    width: calc(100% - 4px);
+    border: 2px solid #222;
 }
 
 .work-item p {
@@ -140,6 +141,10 @@ nav ul {
 #project-showcase {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    column-gap: 5px;
 }
 
 #main-project
