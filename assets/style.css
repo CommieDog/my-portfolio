@@ -35,6 +35,8 @@ h2 {
 header {
     background-color: lightblue;
     display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
     position: relative;
     border-width: 0 0 2px 0;
     border-style: solid;
@@ -97,13 +99,10 @@ nav ul {
 #header-right
 {
     flex-grow: 1;
-    margin: auto 0;
+    /*margin: auto 0;*/
 }
 
 #address {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
     flex-grow: 1;
 }
 
@@ -131,6 +130,10 @@ nav ul {
 
 @media screen and (max-width: 992px)
 {
+    header
+    {
+        flex-direction: column;
+    }
     /*#my-work {
         width: 750px;
     }*/
