@@ -90,13 +90,21 @@ nav ul {
     display: inline;
 }
 
-.work-item h3
-{
+.work-item h3 {
     text-align: center;
 }
 
 .work-item img {
     width: 100%;
+}
+
+.work-item p {
+    display: none;
+    padding-left: 5px;
+}
+
+.work-item:hover p {
+    display: initial;
 }
 
 #portrait
