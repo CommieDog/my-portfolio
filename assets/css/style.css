@@ -94,9 +94,10 @@ nav ul {
 .vertical-spacer
 {
     margin-top: auto;
+    flex: 0 1 0;
 }
 
-.work-item {
+.project {
     /*width: var(--project-item-width);
     height: 480px;*/
     margin: 10px;
@@ -110,7 +111,7 @@ nav ul {
     align-items: center;
 }
 
-.work-item:first-child {
+.project:first-child {
     width: calc(var(--project-item-width) * var(--project-first-size-mult));
     grid-column-start: auto;
     grid-column-end: span 2;
@@ -119,23 +120,23 @@ nav ul {
     align-self: flex-start;
 }
 
-.work-item h3 {
+.project h3 {
     text-align: center;
 }
 
-.work-item a {
+.project a {
     display: block;
     width: var(--project-item-width);
     height: var(--project-item-height);
     flex: 1 1 auto;
 }
 
-.work-item:first-child a {
+.project:first-child a {
     width: calc(var(--project-item-width) * var(--project-first-size-mult));
     height: calc(var(--project-item-height) * var(--project-first-size-mult));
 }
 
-.work-item img {
+.project img {
     /* Needs to be 100% after adjusting for border */
     width: calc(100% - calc(2 * var(--border-thickness)));
     height: calc(100% - calc(2 * var(--border-thickness)));
@@ -143,12 +144,12 @@ nav ul {
     border: var(--border-thickness) solid var(--border-color);
 }
 
-.work-item p {
+.project p {
     display: none;
     padding-left: 5px;
 }
 
-.work-item:hover p {
+.project:hover p {
     display: initial;
 }
 
@@ -170,7 +171,6 @@ nav ul {
 
 #header-right .vertical-spacer
 {
-    flex: 0 1 0;
 }
 
 #address {
@@ -220,23 +220,23 @@ nav ul {
     }
 
     /* ...And proportionately smaller project tiles */
-    .work-item {
+    .project {
         width: var(--project-item-width-tablet);
     }
 
-    .work-item a {
+    .project a {
         width: 100%;
         height: var(--project-item-height-tablet);
         margin: 0 auto;
     }
 
-    .work-item:first-child {
+    .project:first-child {
         width: calc(var(--project-item-width-tablet) * var(--project-first-size-mult));
         justify-self: stretch;
         flex-grow: 1;
     }
 
-    .work-item:first-child a {
+    .project:first-child a {
         height: calc(var(--project-item-height-tablet) * var(--project-first-size-mult));
     }
 
@@ -253,22 +253,22 @@ nav ul {
         max-width: calc(var(--project-item-width-mobile) * var(--project-first-size-mult));
     }
 
-    .work-item {
+    .project {
         width: var(--project-item-width-mobile);
         margin: 0 auto;
     }
 
-    .work-item a {
+    .project a {
         width: 100%;
         height: var(--project-item-height-mobile);
         margin: 0 auto;
     }
 
-    .work-item:first-child {
+    .project:first-child {
         width: calc(var(--project-item-width-mobile) * var(--project-first-size-mult));
     }
 
-    .work-item:first-child a {
+    .project:first-child a {
         height: calc(var(--project-item-height-mobile) * var(--project-first-size-mult));
     }
 
