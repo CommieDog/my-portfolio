@@ -70,6 +70,7 @@ header figure {
     flex-grow: 1;
 }
 
+/* Used inside #header-right to space address element correctly */
 .vertical-spacer
 {
     width: 100%;
@@ -117,23 +118,26 @@ main {
 #project-showcase {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto; /* This whay only one row will be resized when hovering over project */
     place-items: start center;
     justify-content: space-between;
 }
 
 .project {
     margin: 10px;
+    /* A grid item... */
     grid-column-start: auto;
     grid-column-end: auto;
     grid-row-start: auto;
     grid-row-end: auto;
 
+    /* That's itself a flexbox! */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Special treatment for first project */
 .project:first-child {
     width: calc(var(--project-item-width) * var(--project-first-size-mult));
     grid-column-start: auto;
@@ -149,6 +153,8 @@ main {
 
 .project a {
     display: block;
+    /* Conunterintuitive, but image sizing in absolute terms is done here.
+       <img> child grabs all space allocated to its parent as specified in .project img selector */
     width: var(--project-item-width);
     height: var(--project-item-height);
     flex: 1 1 auto;
@@ -163,12 +169,12 @@ main {
     /* Needs to be 100% after adjusting for border */
     width: calc(100% - calc(2 * var(--border-thickness)));
     height: calc(100% - calc(2 * var(--border-thickness)));
-    object-fit: cover;
+    object-fit: cover; /* Fill space, clipping image if you have to instead of stretching */
     border: var(--border-thickness) solid var(--border-color);
 }
 
 .project p {
-    display: none;
+    display: none; /* Not placed on page in normal circumnstances */
     padding-left: 5px;
 }
 
@@ -201,14 +207,12 @@ footer h2 {
         text-align: center;
     }
 
-    /* Slightly smaller area for projects... */
     #project-showcase {
-        /*max-width: calc(calc(var(--project-item-width-tablet) * 2) + 40px);*/
-        display: flex;
+        display: flex; /* flexbox is simpler than grid */
         flex-wrap: wrap;
     }
 
-    /* ...And proportionately smaller project tiles */
+    /* Smaller project tiles */
     .project {
         width: var(--project-item-width-tablet);
     }
@@ -235,9 +239,10 @@ footer h2 {
 {
     #project-showcase
     {
-        display: block;
+        display: block; /* ...and block is simpler than flexbox */
     }
-    
+
+    /* Even smaller project tiles */
     .project {
         width: var(--project-item-width-mobile);
         margin: 0 auto;
