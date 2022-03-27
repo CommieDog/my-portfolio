@@ -85,6 +85,7 @@ nav ul {
 
 .work-item {
     width: 400px;
+    margin: 10px;
 }
 
 .work-item h3 {
@@ -142,9 +143,6 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    column-gap: 5px;
 }
 
 #main-project
