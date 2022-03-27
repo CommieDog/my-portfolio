@@ -21,17 +21,6 @@ body {
     margin: 0px;
 }
 
-footer {
-    margin: auto;
-}
-
-footer h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2em;
-    font-weight: lighter;
-    text-align: center;
-}
-
 h1, h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
@@ -65,8 +54,39 @@ header figure {
     flex-direction: column;
 }
 
-main {
-    margin: 15px;
+#portrait
+{
+    display: block;
+    max-width: 250px;
+    margin: auto;
+    border: 6px ridge chocolate;
+    box-shadow: 10px 8px 3px gray;
+}
+
+#header-right
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.vertical-spacer
+{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 0 1 auto;
+}
+
+#address {
+    height: 33%;
+    margin-left: 20px;
+}
+
+#address p {
+    font-size: 2em;
+    margin: 0;
+    line-height: 1.5;
 }
 
 nav.vertical-spacer
@@ -74,9 +94,9 @@ nav.vertical-spacer
     margin-bottom: 0;
 }
 
-nav a {
-    color: #222;
-    text-decoration: none;
+nav ul {
+    margin-right: 20px;
+    text-align: right;
 }
 
 nav li {
@@ -85,21 +105,24 @@ nav li {
     display: inline;
 }
 
-nav ul {
-    margin-right: 20px;
-    margin-top: auto;
-    text-align: right;
+nav a {
+    color: #222;
+    text-decoration: none;
 }
 
-.vertical-spacer
-{
-    margin-top: auto;
-    flex: 0 1 0;
+main {
+    margin: 15px;
+}
+
+#project-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    place-items: start center;
+    justify-content: space-between;
 }
 
 .project {
-    /*width: var(--project-item-width);
-    height: 480px;*/
     margin: 10px;
     grid-column-start: auto;
     grid-column-end: auto;
@@ -153,52 +176,16 @@ nav ul {
     display: initial;
 }
 
-#portrait
-{
-    display: block;
-    max-width: 250px;
+footer {
     margin: auto;
-    border: 6px ridge chocolate;
-    box-shadow: 10px 8px 3px gray;
 }
 
-#header-right
-{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+footer h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-align: center;
 }
-
-#header-right .vertical-spacer
-{
-}
-
-#address {
-    height: 33%;
-    margin-left: 20px;
-}
-
-#address p {
-    font-size: 2em;
-    margin: 0;
-    line-height: 1.5;
-}
-
-#project-showcase {
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: center;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    place-items: start center;
-    justify-content: space-between;
-}
-
-/*#main-project
-{
-    width: 600px;
-}*/
 
 /* Tablets */
 @media screen and (max-width: 992px)
@@ -215,19 +202,15 @@ nav ul {
     }
 
     /* Slightly smaller area for projects... */
-    #my-work {
-        max-width: calc(calc(var(--project-item-width-tablet) * 2) + 40px);
+    #project-showcase {
+        /*max-width: calc(calc(var(--project-item-width-tablet) * 2) + 40px);*/
+        display: flex;
+        flex-wrap: wrap;
     }
 
     /* ...And proportionately smaller project tiles */
     .project {
         width: var(--project-item-width-tablet);
-    }
-
-    .project a {
-        width: 100%;
-        height: var(--project-item-height-tablet);
-        margin: 0 auto;
     }
 
     .project:first-child {
@@ -236,23 +219,25 @@ nav ul {
         flex-grow: 1;
     }
 
-    .project:first-child a {
-        height: calc(var(--project-item-height-tablet) * var(--project-first-size-mult));
+    .project a {
+        width: 100%;
+        height: var(--project-item-height-tablet);
+        margin: 0 auto;
     }
 
-    #project-showcase {
-        display: flex;
-        flex-wrap: wrap;
+    .project:first-child a {
+        height: calc(var(--project-item-height-tablet) * var(--project-first-size-mult));
     }
 }
 
 /* Mobile */
 @media screen and (max-width: 768px)
 {
-    #my-work {
-        max-width: calc(var(--project-item-width-mobile) * var(--project-first-size-mult));
+    #project-showcase
+    {
+        display: block;
     }
-
+    
     .project {
         width: var(--project-item-width-mobile);
         margin: 0 auto;
@@ -270,10 +255,5 @@ nav ul {
 
     .project:first-child a {
         height: calc(var(--project-item-height-mobile) * var(--project-first-size-mult));
-    }
-
-    #project-showcase
-    {
-        display: block;
     }
 }
