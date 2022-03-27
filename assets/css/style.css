@@ -1,3 +1,12 @@
+:root {
+    --border-thickness: 2px;
+    --border-color: #222;
+    --project-item-width: 400px;
+    --project-item-width-tablet: 350px;
+    --project-item-width-mobile: 300px;
+    --project-first-size-mult: 1.5;
+}
+
 * {
     font-size: 20px; /* I like big letters */
     font-family: 'Times New Roman', Times, serif;
@@ -42,9 +51,9 @@ header {
     flex-wrap: wrap;
     align-items: stretch;
     position: relative;
-    border-width: 0 0 2px 0;
+    border-width: 0 0 var(--border-thickness) 0;
     border-style: solid;
-    border-color: #222;
+    border-color: var(--border-color);
 }
 
 header figure {
@@ -84,8 +93,12 @@ nav ul {
 }
 
 .work-item {
-    width: 400px;
+    width: var(--project-item-width);
     margin: 10px;
+}
+
+.work-item:first-child {
+    width: calc(var(--project-item-width) * var(--project-first-size-mult));
 }
 
 .work-item h3 {
@@ -94,8 +107,8 @@ nav ul {
 
 .work-item img {
     /* Needs to be 100% after adjusting for border */
-    width: calc(100% - 4px);
-    border: 2px solid #222;
+    width: calc(100% - calc(2 * var(--border-thickness)));
+    border: var(--border-thickness) solid var(--border-color);
 }
 
 .work-item p {
@@ -145,10 +158,10 @@ nav ul {
     justify-content: center;
 }
 
-#main-project
+/*#main-project
 {
     width: 600px;
-}
+}*/
 
 @media screen and (max-width: 992px)
 {
@@ -165,36 +178,30 @@ nav ul {
 
     /* Slightly smaller area for projects... */
     #my-work {
-        width: 750px;
+        max-width: calc(calc(var(--project-item-width-tablet) * 2) + 40px);
     }
 
     /* ...And proportionately smaller project tiles */
     .work-item {
-        width: 375px;
+        width: var(--project-item-width-tablet);
     }
 
-    #main-project
-    {
-        width: 562.5px;
+    .work-item:first-child {
+        width: calc(var(--project-item-width-tablet) * var(--project-first-size-mult));
     }
 }
 
 @media screen and (max-width: 768px)
 {
     #my-work {
-        width: 600px;
+        max-width: calc(var(--project-item-width-mobile) * var(--project-first-size-mult));
     }
 
     .work-item {
-        width: 375px;
-        margin: 0 auto; /* center element horziontally*/
-        /* Don't bother with floating elements, screen size is too small to try */
-        display: block;
-        float: none;
+        width: var(--project-item-width-mobile);
     }
 
-    #main-project
-    {
-        width: 562.5px;
+    .work-item:first-child {
+        width: calc(var(--project-item-width-mobile) * var(--project-first-size-mult));
     }
 }
