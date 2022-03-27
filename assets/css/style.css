@@ -1,10 +1,10 @@
 :root {
     --border-thickness: 2px;
     --border-color: #222;
-    --project-item-width: 400px;
+    --project-item-width: 320px;
     --project-item-width-tablet: 350px;
     --project-item-width-mobile: 300px;
-    --project-first-size-mult: 1.5;
+    --project-first-size-mult: 1.75;
 }
 
 * {
@@ -95,10 +95,19 @@ nav ul {
 .work-item {
     width: var(--project-item-width);
     margin: 10px;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
 }
 
 .work-item:first-child {
     width: calc(var(--project-item-width) * var(--project-first-size-mult));
+    grid-column-start: auto;
+    grid-column-end: span 2;
+    grid-row-start: auto;
+    grid-row-end: span 2;
+    align-self: flex-start;
 }
 
 .work-item h3 {
@@ -153,9 +162,14 @@ nav ul {
 }
 
 #project-showcase {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    place-items: start center;
+    justify-content: space-between;
 }
 
 /*#main-project
@@ -163,6 +177,7 @@ nav ul {
     width: 600px;
 }*/
 
+/* Tablets */
 @media screen and (max-width: 992px)
 {
     header
@@ -188,9 +203,17 @@ nav ul {
 
     .work-item:first-child {
         width: calc(var(--project-item-width-tablet) * var(--project-first-size-mult));
+        justify-self: stretch;
+        flex-grow: 1;
+    }
+
+    #project-showcase {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
+/* Mobile */
 @media screen and (max-width: 768px)
 {
     #my-work {
@@ -199,9 +222,15 @@ nav ul {
 
     .work-item {
         width: var(--project-item-width-mobile);
+        margin: 0 auto;
     }
 
     .work-item:first-child {
         width: calc(var(--project-item-width-mobile) * var(--project-first-size-mult));
+    }
+
+    #project-showcase
+    {
+        display: block;
     }
 }
