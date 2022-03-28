@@ -36,10 +36,12 @@ How the projects are laid out on the screen is heavily dependent on the screen's
 
 Currently, most of the project tiles are placeholders. Only the first project features work of mine.
 
+
 ## Features
 
 * Proper use of semantic HTML
 * Responsive web design
+* Multiple stylesheets
 * Rich use of CSS features
   * Linear gradient background
   * Pseudo-classes such as `:hover`
@@ -62,7 +64,18 @@ Currently, most of the project tiles are placeholders. Only the first project fe
 
 ## Future Work
 
-Future work on this project would likely come in the form of improved accessibility, partucularly for users with small screen sizes. The basic layout of the webpage is not stable when squeezed into small sizes, and a few visual elements are too indistinct even for nonimpared users to notice. The Benefits section in particular would benefit from the use of flexboxes.
+The biggest improvement for this website would be to have some projects for me to display instead of having to use placeholders. The biography section could also use a rewrite; I'm not terribly good talking about myself.
+
+
+## Credits
+
+[Normalize.css](https://github.com/necolas/normalize.css) Copyright © Nicolas Gallagher and Jonathan Neal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 ## License
