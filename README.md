@@ -38,17 +38,20 @@ Currently, most of the project tiles are placeholders. Only the first project fe
 
 ## Features
 
-* Addition of `<title>` element
 * Proper use of semantic HTML
-    * Added `<header>` element, complete with included `<nav>` element
-    * Added `<main>` element
-    * Replaced nonsemantic `<div>` elements with `<section>`
-    * Wrapped images in `<figure>`
-    * Added `<footer>` element
-* Logical ordering of content within both the Service and Benefit subsections
-* Proper numbering for header elements
-* Images with alternate descriptors
-* Extensive use of CSS positioning properties, such as `float`, `display`, and `position`, to display content
+* Responsive web design
+* Rich use of CSS features
+  * Linear gradient background
+  * Pseudo-classes such as `:hover`
+  * Variables
+  * Media queries
+* CSS functions
+    ```CSS
+    .project:first-child {
+      width: calc(var(--project-item-width) * var(--project-first-size-mult));
+      ...
+    }
+* Extensive use of CSS `display` properties, including `flex` and `grid`, to display content
 
 
 ## Technologies Used
